@@ -81,10 +81,11 @@ $result = $conn->query($sql);
         </div>
     </div>
 </div>
-
-<?php
-$conn->close();
-include 'includes/footer.php';
-?>
 </body>
+<footer>
+    <?php
+    $conn->close();
+    include 'includes/footer.php';
+    ?>
+</footer>
 </html>

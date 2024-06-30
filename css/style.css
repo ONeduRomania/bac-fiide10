@@ -1,6 +1,7 @@
-body {
+body, html {
     font-family: Arial, sans-serif;
     margin: 0;
+    height: 100%;
     padding: 0;
     background-color: #f4f4f4;
 }
@@ -71,6 +72,7 @@ body {
 }
 
 .main-content {
+    flex: 1;
     margin-left: 220px;
     padding: 20px;
 }
@@ -148,7 +150,8 @@ footer {
     background-color: #fff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     font-size: 0.8em;
-    margin-top: 20px;
+    width: 100%;
+    margin-top: auto;
 }
 
 .footer-links a {
@@ -156,7 +159,6 @@ footer {
     text-decoration: none;
     margin: 0 5px;
 }
-
 .news-item {
     background-color: #fff;
     padding: 15px;
@@ -267,8 +269,7 @@ footer {
         margin-left: 0;
         margin-right: 20px;
         padding: 20px;
-        margin-top: 60px; /* Ajustez înălțimea după nevoie */
-    }
+        margin-top: 60px;  }
 
     .columns {
         display: flex;
@@ -307,6 +308,11 @@ footer {
         align-items: center;
     }
 }
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;}
 
 .useful-info {
     background-color: #fff;
