@@ -5,122 +5,137 @@ body {
     background-color: #f4f4f4;
 }
 
-.mobile-header {
-    display: none; /* Afișează bara de antet doar pe ecranele mici */
-}
-
-.hamburger {
-    display: none; /* Ascunde butonul hamburger implicit pe toate ecranele */
-}
-
-.hamburger-box {
-    width: 25px;
-    height: 20px;
-    display: inline-block;
-    position: relative;
-}
-
-.hamburger-inner {
-    width: 100%;
-    height: 2px;
-    background-color: #333;
-    position: absolute;
+.sidebar {
+    width: 200px;
+    position: fixed;
+    top: 0;
     left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: background-color 0.3s ease;
+    height: 100%;
+    background-color: #fff;
+    padding-top: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
 }
 
-.hamburger-inner::before,
-.hamburger-inner::after {
-    content: '';
-    width: 100%;
-    height: 2px;
-    background-color: #333;
-    position: absolute;
-    left: 0;
-    transition: transform 0.3s ease;
+.sidebar .logo {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-.hamburger-inner::before {
-    top: -6px;
+.sidebar .logo img {
+    width: 80px; /* dimensiunea mai mică a siglei */
 }
 
-.hamburger-inner::after {
-    bottom: -6px;
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
 }
 
-/* Stiluri generale pentru toate dimensiunile de ecran */
-@media (max-width: 768px) {
-    .mobile-header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 60px;
-        background-color: #fff;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        padding: 0 20px;
-        z-index: 1000;
-    }
-
-    .hamburger {
-        display: inline-block; /* Afișează butonul hamburger pe ecranele mici */
-        background: none;
-        border: none;
-        cursor: pointer;
-    }
-
-    .sidebar {
-        width: 200px;
-        position: fixed;
-        top: 0;
-        left: 0;
-        height: 100%;
-        background-color: #fff;
-        padding-top: 20px;
-        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-        transition: left 0.3s ease;
-        z-index: 999;
-    }
-
-    .main-content {
-        margin-left: 220px;
-        padding: 20px;
-    }
-
-    .columns {
-        display: flex;
-        gap: 20px;
-    }
-
-    .news {
-        flex: 2;
-        background-color: white;
-        padding: 20px;
-        border-radius: 5px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .side-column {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
+.sidebar ul li {
+    padding: 10px;
+    text-align: left;
 }
 
-.footer {
+.sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+    background-color: #ddd;
+    color: #333;
+}
+
+.sidebar ul li a i {
+    margin-right: 10px;
+}
+
+.main-content {
+    margin-left: 220px;
+    padding: 20px;
+}
+
+.columns {
+    display: flex;
+    gap: 20px;
+}
+
+.news {
+    flex: 2;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.side-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.calendar,
+.statistics {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.news-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.news-date {
+    color: gray;
+}
+
+.calendar-event {
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+}
+
+.calendar-event[data-date='today'] {
+    background-color: #cce5ff;
+}
+
+.statistics .statistic-item {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.statistics .statistic-item:last-child {
+    border-bottom: none;
+}
+
+.statistics .statistic-item p {
+    margin: 0;
+    font-weight: bold;
+}
+
+.statistics .statistic-item span {
+    float: right;
+    font-size: 1.2em;
+}
+
+footer {
     text-align: center;
     padding: 10px 0;
     background-color: #fff;
-    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
-    margin-top: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Elimină proprietățile 'position', 'bottom', 'left', 'width' pentru a nu mai fi fixat */
     font-size: 0.8em;
+    margin-top: 20px; /* Adaugă spațiu între conținut și footer */
 }
+
 
 .footer-links a {
     color: gray;
@@ -165,3 +180,132 @@ body {
     width: 50px;
     height: auto;
 }
+
+/*.hamburger {*/
+/*    display: block;*/
+/*    position: fixed;*/
+/*    top: 20px;*/
+/*    left: 20px;*/
+/*    width: 40px;*/
+/*    height: 40px;*/
+/*    background: none;*/
+/*    border: none;*/
+/*    cursor: pointer;*/
+/*    z-index: 1000;*/
+/*}*/
+
+.hamburger-box {
+    width: 25px;
+    height: 20px;
+    display: inline-block;
+    position: relative;
+}
+
+.hamburger-inner {
+    width: 100%;
+    height: 2px;
+    background-color: #333;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: background-color 0.3s ease;
+}
+
+.hamburger-inner::before,
+.hamburger-inner::after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #333;
+    position: absolute;
+    left: 0;
+    transition: transform 0.3s ease;
+}
+
+.hamburger-inner::before {
+    top: -6px;
+}
+
+.hamburger-inner::after {
+    bottom: -6px;
+}
+
+/* Stiluri generale pentru toate dimensiunile de ecran */
+.hamburger {
+    display: none; /* Ascunde butonul hamburger implicit pe toate ecranele */
+}
+
+/* Media query pentru ecrane mai mici de 769px (telefoane și tablete) */
+@media (max-width: 768px) {
+    .hamburger {
+        display: inline-block; /* Afișează butonul hamburger pe ecranele mici */
+        background: none;
+        border: none;
+        cursor: pointer;
+        margin-right: 10px;
+    }
+
+    .sidebar {
+        width: 100%;
+        max-width: 300px;
+        position: fixed;
+        top: 0;
+        left: -300px;
+        height: 100%;
+        background-color: #fff;
+        padding-top: 20px;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        transition: left 0.3s ease;
+        z-index: 999;
+    }
+
+    .sidebar.open {
+        left: 0;
+    }
+
+    .main-content {
+        margin-left: 0;
+        margin-right: 20px; /* Ajustare margin dreapta pentru a face loc sidebar-ului deschis */
+        padding: 20px;
+    }
+
+    .columns {
+        display: flex;
+        gap: 20px;
+    }
+
+    .news {
+        flex: 2;
+        background-color: white;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .side-column {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .mobile-header {
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        padding: 10px 20px;
+    }
+
+    .mobile-header .hamburger-container {
+        display: flex;
+        align-items: center;
+    }
+}
+
+
