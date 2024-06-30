@@ -17,30 +17,7 @@ $result = $conn->query($sql);
 </head>
 <body>
 
-<div class="sidebar">
-    <div class="logo">
-        <img src="images/logo.png" alt="Logo">
-    </div>
-    <ul>
-        <li><a href="index.php" class="active"><i class="icon-dashboard"></i> Dashboard</a></li>
-        <li><a href="#"><i class="icon-news"></i> Noutăți</a></li>
-        <li><a href="#"><i class="icon-info"></i> Informații utile</a></li>
-        <li><a href="#"><i class="icon-results"></i> Rezultate</a></li>
-        <li><a href="#"><i class="icon-subjects"></i> Subiecte</a></li>
-        <li><a href="#"><i class="icon-training"></i> Antrenează-te</a></li>
-        <li><a href="#"><i class="icon-study"></i> Învață de 10</a></li>
-        <li><a href="#"><i class="icon-college"></i> Vreau la facultate</a></li>
-    </ul>
-    <footer>
-        <div class="footer-links">
-            <a href="#">Confidenţialitate</a> ·
-            <a href="#">Condiţii de utilizare</a> ·
-            <a href="#">Protecția datelor</a> ·
-            <a href="#">Despre</a> ·
-            <a href="#">Asociația ONedu © 2024</a>
-        </div>
-    </footer>
-</div>
+<?php include 'includes/sidebar.php'; ?>
 
 <div class="main-content">
     <div class="container">
@@ -71,11 +48,11 @@ $result = $conn->query($sql);
                 <div class="statistics">
                     <h2>Statistici</h2>
                     <div class="statistic-item">
-                        <p>Candidați prezenți</p>
+                        <p>Candidați înscriși</p>
                         <span>0</span>
                     </div>
                     <div class="statistic-item">
-                        <p>Candidați absenți</p>
+                        <p>Candidați prezenți</p>
                         <span>0</span>
                     </div>
                     <div class="statistic-item">
@@ -90,6 +67,7 @@ $result = $conn->query($sql);
 
 <?php
 $conn->close();
+include 'includes/footer.php';
 ?>
 </body>
 </html>
