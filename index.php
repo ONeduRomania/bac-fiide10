@@ -1,9 +1,9 @@
 <?php
-include 'includes/config.php';
-$conn = get_db_connection($config);
-
-$sql = "SELECT title, description, DATE_FORMAT(date, '%d %b. %Y') as date, DATE_FORMAT(time, '%H:%i') as time FROM news";
-$result = $conn->query($sql);
+//include 'includes/config.php';
+//$conn = get_db_connection($config);
+//
+//$sql = "SELECT title, description, DATE_FORMAT(date, '%d %b. %Y') as date, DATE_FORMAT(time, '%H:%i') as time FROM news";
+//$result = $conn->query($sql);
 ?>
 
 <!DOCTYPE html>
@@ -25,19 +25,19 @@ $result = $conn->query($sql);
         <div class="columns">
             <div class="news">
                 <h2>Noutăți 2024</h2>
-                <?php
-                if ($result->num_rows > 0) {
-                    while($row = $result->fetch_assoc()) {
-                        echo '<div class="news-item">';
-                        echo '<div class="news-title">' . $row["title"] . '</div>';
-                        echo '<div class="news-description">' . $row["description"] . '</div>';
-                        echo '<div class="news-date">' . $row["date"] . ' ' . $row["time"] . '</div>';
-                        echo '</div>';
-                    }
-                } else {
-                    echo '0 results';
-                }
-                ?>
+<!--                --><?php
+//                if ($result->num_rows > 0) {
+//                    while($row = $result->fetch_assoc()) {
+//                        echo '<div class="news-item">';
+//                        echo '<div class="news-title">' . $row["title"] . '</div>';
+//                        echo '<div class="news-description">' . $row["description"] . '</div>';
+//                        echo '<div class="news-date">' . $row["date"] . ' ' . $row["time"] . '</div>';
+//                        echo '</div>';
+//                    }
+//                } else {
+//                    echo '0 results';
+//                }
+//                ?>
             </div>
             <div class="side-column">
                 <div class="calendar">
@@ -66,7 +66,7 @@ $result = $conn->query($sql);
 </div>
 
 <?php
-$conn->close();
+//$conn->close();
 include 'includes/footer.php';
 ?>
 </body>
