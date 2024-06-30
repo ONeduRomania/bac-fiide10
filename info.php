@@ -7,10 +7,9 @@
     <title>Informații utile</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script>
+    <?php include 'includes/sidebar.php'; ?>
 </head>
 <body>
-
-<?php include 'includes/sidebar.php'; ?>
 
 <div class="main-content">
     <div class="container">

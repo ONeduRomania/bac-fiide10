@@ -162,6 +162,7 @@ body, html {
     text-decoration: none;
     margin: 0 5px;
 }
+
 .news-item {
     background-color: #fff;
     padding: 15px;
@@ -272,7 +273,8 @@ body, html {
         margin-left: 0;
         margin-right: 20px;
         padding: 20px;
-        margin-top: 60px;  }
+        margin-top: 60px;
+    }
 
     .columns {
         display: block;
@@ -323,7 +325,8 @@ body, html {
 .container {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;}
+    min-height: 100vh;
+}
 
 .useful-info {
     background-color: #fff;
@@ -367,4 +370,71 @@ body, html {
     font-size: 14px;
     line-height: 1.6;
     color: #333;
+}
+
+/* Stilizare generală pentru formular */
+form.inline-form {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    text-align: center;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+form.inline-form h1 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333;
+    width: 100%;
+}
+
+
+form.inline-form .form-content {
+    display: flex;
+    /*flex-wrap: wrap; */
+    justify-content: center;
+    width: 100%;
+}
+
+form.inline-form .form-content > * {
+    margin: 0 5px;
+}
+
+form.inline-form label {
+    margin-right: 10px;
+}
+
+form.inline-form select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+}
+
+form.inline-form button {
+    padding: 12px 24px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    align-content: center;
+    display: block;
+}
+
+form.inline-form button:hover {
+    background-color: #0056b3;
 }

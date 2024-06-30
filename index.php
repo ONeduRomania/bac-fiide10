@@ -16,15 +16,10 @@ $result = $conn->query($sql);
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script>
 
-    <meta name="description" content="Tot ce trebuie să știi despre Bac 2024.">
-    <meta name="keywords" content="subiecte bac 2024, bacalaureat 2024, bac, bacalaureat, examen 2024, scoala 2024,
-     ce a picat la bac, ce pica la romana, ce a picat la romana, rezultate bac 2024, rezultate examen 2024">
-
+    <?php include 'includes/sidebar.php'; ?>
 
 </head>
 <body>
-
-<?php include 'includes/sidebar.php'; ?>
 
 <div class="main-content">
     <div class="container">
