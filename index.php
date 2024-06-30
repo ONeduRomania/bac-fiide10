@@ -29,10 +29,18 @@ $result = $conn->query($sql);
                 if ($result->num_rows > 0) {
                     while($row = $result->fetch_assoc()) {
                         echo '<div class="news-item">';
+                        echo '<div class="news-content">';
                         echo '<div class="news-title">' . $row["title"] . '</div>';
                         echo '<div class="news-description">' . $row["description"] . '</div>';
-                        echo '<div class="news-date">' . $row["date"] . ' ' . $row["time"] . '</div>';
                         echo '</div>';
+                        echo '<div class="news-footer">';
+                        echo '<div class="news-date">' . $row["date"] . ' ' . $row["time"] . '</div>';
+                        echo '<div class="logo-link">';
+                        echo '<a href="https://onedu.ro" target="_blank"><img src="logo_onedu.png" alt="ONEDU"></a>';
+                        echo '</div>';
+                        echo '</div>';
+                        echo '</div>';
+
                     }
                 } else {
                     echo '0 results';
