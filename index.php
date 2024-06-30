@@ -2,7 +2,7 @@
 include 'includes/config.php';
 $conn = get_db_connection($config);
 
-$sql = "SELECT title, description, DATE_FORMAT(date, '%d %b. %Y') as date, DATE_FORMAT(time, '%H:%i') as time FROM news";
+$sql = "SELECT title, description, date, time FROM news";
 $result = $conn->query($sql);
 ?>
 
@@ -36,7 +36,7 @@ $result = $conn->query($sql);
                         echo '<div class="news-footer">';
                         echo '<div class="news-date">' . $row["date"] . ' ' . $row["time"] . '</div>';
                         echo '<div class="logo-link">';
-                        echo '<a href="https://onedu.ro" target="_blank"><img src="logo_onedu.png" alt="ONEDU"></a>';
+                        echo '<a href="https://onedu.ro" target="_blank"><img src="https://www.onedu.ro/wp-content/uploads/2023/08/logoCOR.webp" alt="logo_onedu"></a>';
                         echo '</div>';
                         echo '</div>';
                         echo '</div>';
