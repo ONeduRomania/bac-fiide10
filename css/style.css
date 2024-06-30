@@ -438,3 +438,11 @@ form.inline-form button {
 form.inline-form button:hover {
     background-color: #0056b3;
 }
+
+.subiecte-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    align-content: center;
+}
