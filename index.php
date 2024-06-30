@@ -20,8 +20,15 @@ $result = $conn->query($sql);
 </head>
 <body>
 
-<div class="header">
-    <!-- Aici poți adăuga conținut suplimentar dacă este cazul -->
+<div class="mobile-header">
+    <div class="hamburger-container">
+        <button class="hamburger" type="button" aria-label="Toggle Navigation">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
+        </button>
+        <span class="title">Bacalaureat de 10!</span>
+    </div>
 </div>
 
 
