@@ -1,4 +1,13 @@
 <div class="sidebar">
+
+    <!-- Buton pentru meniu hamburger -->
+    <button class="hamburger" type="button" aria-label="Toggle Navigation">
+    <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+    </span>
+    </button>
+
+
     <div class="logo">
         <a href="https://bac.fiide10.ro"> <img src="../images/logo.png" alt="Logo" width="200px"></a>
     </div>
