@@ -66,7 +66,8 @@ $result = $conn->query($sql);
                     <h2>Statistici</h2>
                     <div class="statistic-item">
                         <p>Candidați înscriși</p>
-                        <span>134.000</span>
+                        134.000
+<!--                        <span>134.000</span>-->
                     </div>
                     <div class="statistic-item">
                         <p>Candidați prezenți</p>
