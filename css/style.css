@@ -15,6 +15,11 @@ body {
     padding-top: 20px;
 }
 
+.sidebar .logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
 .sidebar ul {
     list-style-type: none;
     padding: 0;
@@ -29,18 +34,54 @@ body {
     text-decoration: none;
     color: #333;
     display: block;
+    padding: 10px;
+    border-radius: 5px;
 }
 
-.container {
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+    background-color: #ddd;
+    color: #333;
+}
+
+.sidebar ul li a i {
+    margin-right: 10px;
+}
+
+.footer-links {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.8em;
+}
+
+.footer-links a {
+    color: gray;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.main-content {
     margin-left: 220px;
     padding: 20px;
 }
 
-.news-item {
-    border: 1px solid #ddd;
-    padding: 20px;
-    margin: 10px 0;
+.news-calendar-stats {
+    display: flex;
+    justify-content: space-between;
+}
+
+.news,
+.calendar,
+.statistics {
+    width: 32%;
     background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .news-title {
@@ -52,34 +93,32 @@ body {
     color: gray;
 }
 
-.calendar {
-    margin-top: 20px;
-    margin-left: 220px;
-    padding: 20px;
-    background-color: white;
-}
-
 .calendar-event {
-    padding: 5px;
-    margin: 5px 0;
+    padding: 10px;
+    margin: 10px 0;
     background-color: #f4f4f4;
+    border-radius: 5px;
 }
 
 .calendar-event[data-date='today'] {
     background-color: #cce5ff;
 }
 
-.footer-links {
-    position: absolute;
-    bottom: 10px;
-    left: 220px;
-    width: calc(100% - 240px);
-    text-align: center;
+.statistics .statistic-item {
     padding: 10px 0;
+    border-bottom: 1px solid #ddd;
 }
 
-.footer-links a {
-    color: gray;
-    text-decoration: none;
-    margin: 0 5px;
+.statistics .statistic-item:last-child {
+    border-bottom: none;
+}
+
+.statistics .statistic-item p {
+    margin: 0;
+    font-weight: bold;
+}
+
+.statistics .statistic-item span {
+    float: right;
+    font-size: 1.2em;
 }
