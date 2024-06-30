@@ -25,3 +25,13 @@ function closeAllInfo() {
         detail.classList.remove('open');
     });
 }
+
+function openSidebar() {
+    var sidebar = document.querySelector('.sidebar');
+    sidebar.classList.add('open');
+}
+
+function closeSidebar() {
+    var sidebar = document.querySelector('.sidebar');
+    sidebar.classList.remove('open');
+}

@@ -1,13 +1,19 @@
+<div class="mobile-header">
+    <div class="hamburger-container">
+        <button class="hamburger" onclick="toggleSidebar()">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
+        </button>
+        <a class="logo-link" href="https://bac.fiide10.ro">
+            <img src="../images/logo.png" alt="Logo">
+        </a>
+    </div>
+</div>
+
+
 <div class="sidebar">
-
-    <button class="hamburger">
-    <span class="hamburger-box">
-        <span class="hamburger-inner"></span>
-    </span>
-    </button>
-
-
-
+    <div class="close-btn" onclick="closeSidebar()">&times;</div>
     <div class="logo">
         <a href="https://bac.fiide10.ro"> <img src="../images/logo.png" alt="Logo" width="200px"></a>
     </div>
