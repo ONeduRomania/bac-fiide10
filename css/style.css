@@ -252,35 +252,61 @@ footer {
 
     .main-content {
         margin-left: 0;
+        margin-right: 20px; /* Ajustare margin dreapta pentru a face loc sidebar-ului deschis */
         padding: 20px;
     }
 
     .columns {
+        display: flex;
+        gap: 20px;
+    }
+
+    .news {
+        flex: 2;
+        background-color: white;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .side-column {
+        flex: 1;
+        display: flex;
         flex-direction: column;
+        gap: 20px;
     }
 
-    .news-item {
-        margin-left: 0;
-        margin-right: 0;
-    }
-
-    .hamburger {
-        display: block;
-    }
-}
-
-@media (min-width: 769px) {
     .hamburger {
         display: none;
     }
 
-    .sidebar {
-        position: static; /* Meniul lateral va fi static pe ecrane mai mari */
-        width: 200px; /* Lățimea originală a meniului lateral */
-        box-shadow: none; /* Nu mai este nevoie de umbra pe ecrane mari */
+    .mobile-header {
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        z-index: 1000;
+        padding: 10px 20px;
     }
 
-    .main-content {
-        margin-left: 0;
+    .mobile-header .hamburger-container {
+        display: flex;
+        align-items: center;
+    }
+
+    .mobile-header .hamburger {
+        background: none;
+        border: none;
+        cursor: pointer;
+        margin-right: 10px;
+    }
+
+    .mobile-header .title {
+        font-size: 1.2em;
+        font-weight: bold;
+        color: #333;
     }
 }
