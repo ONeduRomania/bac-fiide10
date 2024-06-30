@@ -15,10 +15,19 @@ $result = $conn->query($sql);
     <link rel="icon" href="images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 </head>
 <body>
+
+<div class="mobile-header">
+    <div class="hamburger-container">
+        <button class="hamburger" type="button" aria-label="Toggle Navigation">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
+        </button>
+        <span class="title">Bacalaureat de 10!</span>
+    </div>
+</div>
 
 <?php include 'includes/sidebar.php'; ?>
 
@@ -43,7 +52,6 @@ $result = $conn->query($sql);
                         echo '</div>';
                         echo '</div>';
                         echo '</div>';
-
                     }
                 } else {
                     echo '0 results';
