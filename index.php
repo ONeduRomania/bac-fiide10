@@ -24,7 +24,6 @@ $result = $conn->query($sql);
 
 <div class="main-content">
     <div class="container">
-        <h1>Bacalaureat de 10!</h1>
         <div class="columns">
             <div class="news">
                 <h2>Noutăți 2024</h2>

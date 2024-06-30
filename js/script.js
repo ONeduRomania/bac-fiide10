@@ -6,3 +6,22 @@ document.addEventListener('DOMContentLoaded', function() {
         sidebar.classList.toggle('open');
     });
 });
+
+function toggleInfo() {
+    var infoSubtitle = event.target.closest('.info-subtitle');
+    var infoContent = infoSubtitle.nextElementSibling;
+
+    if (infoContent.classList.contains('open')) {
+        infoContent.classList.remove('open');
+    } else {
+        closeAllInfo(); // Închide toate detaliile existente
+        infoContent.classList.add('open');
+    }
+}
+
+function closeAllInfo() {
+    var infoDetails = document.querySelectorAll('.info-details');
+    infoDetails.forEach(function(detail) {
+        detail.classList.remove('open');
+    });
+}

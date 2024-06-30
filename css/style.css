@@ -308,4 +308,47 @@ footer {
     }
 }
 
+/* Stiluri pentru secțiunea de "Informații utile" */
+.useful-info {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto; /* Centrare în pagină */
+    max-width: 800px; /* Lățime maximă pentru a limita lățimea conținutului */
+}
 
+.info-subtitle {
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.info-subtitle:hover {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+.info-details {
+    overflow: hidden; /* Ascunde conținutul care depășește înălțimea maximă */
+    max-height: 0; /* Începe cu o înălțime maximă de 0 */
+    transition: max-height 0.3s ease-out; /* Adaugă o tranziție la schimbarea înălțimii */
+}
+
+.info-details.open {
+    max-height: 200px; /* Înălțimea maximă pentru detaliile deschise */
+}
+
+.info-text {
+    padding: 10px; /* Adaugă padding pentru a separa textul de marginea chenarului */
+    font-size: 14px; /* Dimensiunea fontului pentru text */
+    line-height: 1.6; /* Înălțimea liniei pentru text */
+    color: #333; /* Culoarea textului */
+}
