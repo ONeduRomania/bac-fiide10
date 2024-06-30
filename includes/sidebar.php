@@ -1,11 +1,11 @@
 <div class="sidebar">
 
-    <!-- Buton pentru meniu hamburger -->
-    <button class="hamburger" type="button" aria-label="Toggle Navigation">
+    <button class="hamburger">
     <span class="hamburger-box">
         <span class="hamburger-inner"></span>
     </span>
     </button>
+
 
 
     <div class="logo">
