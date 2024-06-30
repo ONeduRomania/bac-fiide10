@@ -13,7 +13,7 @@ body {
     height: 100%;
     background-color: #fff;
     padding-top: 20px;
-    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
 }
 
 .sidebar .logo {
@@ -130,7 +130,7 @@ footer {
     text-align: center;
     padding: 10px 0;
     background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     /* Elimină proprietățile 'position', 'bottom', 'left', 'width' pentru a nu mai fi fixat */
     font-size: 0.8em;
     margin-top: 20px; /* Adaugă spațiu între conținut și footer */
@@ -181,18 +181,18 @@ footer {
     height: auto;
 }
 
-.hamburger {
-    display: block;
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    width: 40px;
-    height: 40px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    z-index: 1000;
-}
+/*.hamburger {*/
+/*    display: block;*/
+/*    position: fixed;*/
+/*    top: 20px;*/
+/*    left: 20px;*/
+/*    width: 40px;*/
+/*    height: 40px;*/
+/*    background: none;*/
+/*    border: none;*/
+/*    cursor: pointer;*/
+/*    z-index: 1000;*/
+/*}*/
 
 .hamburger-box {
     width: 25px;
@@ -231,7 +231,21 @@ footer {
     bottom: -6px;
 }
 
+/* Stiluri generale pentru toate dimensiunile de ecran */
+.hamburger {
+    display: none; /* Ascunde butonul hamburger implicit pe toate ecranele */
+}
+
+/* Media query pentru ecrane mai mici de 769px (telefoane și tablete) */
 @media (max-width: 768px) {
+    .hamburger {
+        display: inline-block; /* Afișează butonul hamburger pe ecranele mici */
+        background: none;
+        border: none;
+        cursor: pointer;
+        margin-right: 10px;
+    }
+
     .sidebar {
         width: 100%;
         max-width: 300px;
@@ -241,7 +255,7 @@ footer {
         height: 100%;
         background-color: #fff;
         padding-top: 20px;
-        box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
         transition: left 0.3s ease;
         z-index: 999;
     }
@@ -276,10 +290,6 @@ footer {
         gap: 20px;
     }
 
-    .hamburger {
-        display: none;
-    }
-
     .mobile-header {
         display: flex;
         position: fixed;
@@ -287,7 +297,7 @@ footer {
         left: 0;
         width: 100%;
         background-color: #fff;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         z-index: 1000;
         padding: 10px 20px;
     }
@@ -296,17 +306,6 @@ footer {
         display: flex;
         align-items: center;
     }
-
-    .mobile-header .hamburger {
-        background: none;
-        border: none;
-        cursor: pointer;
-        margin-right: 10px;
-    }
-
-    .mobile-header .title {
-        font-size: 1.2em;
-        font-weight: bold;
-        color: #333;
-    }
 }
+
+
