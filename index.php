@@ -71,11 +71,11 @@ $result = $conn->query($sql);
                     </div>
                     <div class="statistic-item">
                         <p>Candidați prezenți</p>
-                        <span>0</span>
+                        0
                     </div>
                     <div class="statistic-item">
                         <p>Candidați promovați</p>
-                        <span>0</span>
+                        0
                     </div>
                 </div>
             </div>
