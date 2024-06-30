@@ -84,8 +84,7 @@
 
 </body>
 
-<footer>
-    <?php include 'includes/footer.php'; ?>
-</footer>
+<?php include 'includes/footer.php'; ?>
+
 </html>
 
