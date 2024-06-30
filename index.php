@@ -45,7 +45,7 @@ $result = $conn->query($sql);
 <div class="main-content">
     <div class="container">
         <h1>Bacalaureat de 10!</h1>
-        <div class="news-calendar-stats">
+        <div class="columns">
             <div class="news">
                 <h2>Noutăți 2024</h2>
                 <?php
@@ -62,24 +62,26 @@ $result = $conn->query($sql);
                 }
                 ?>
             </div>
-            <div class="calendar">
-                <h2>Calendar 2024</h2>
-                <div class="calendar-event" data-date="today">29.06 14:00 - Rezultate examen</div>
-                <!-- Adaugă alte evenimente similar -->
-            </div>
-            <div class="statistics">
-                <h2>Statistici</h2>
-                <div class="statistic-item">
-                    <p>Candidați prezenți</p>
-                    <span>0</span>
+            <div class="side-column">
+                <div class="calendar">
+                    <h2>Calendar 2024</h2>
+                    <div class="calendar-event" data-date="today">29.06 14:00 - Rezultate examen</div>
+                    <!-- Adaugă alte evenimente similar -->
                 </div>
-                <div class="statistic-item">
-                    <p>Candidați absenți</p>
-                    <span>0</span>
-                </div>
-                <div class="statistic-item">
-                    <p>Candidați promovați</p>
-                    <span>0</span>
+                <div class="statistics">
+                    <h2>Statistici</h2>
+                    <div class="statistic-item">
+                        <p>Candidați prezenți</p>
+                        <span>0</span>
+                    </div>
+                    <div class="statistic-item">
+                        <p>Candidați absenți</p>
+                        <span>0</span>
+                    </div>
+                    <div class="statistic-item">
+                        <p>Candidați promovați</p>
+                        <span>0</span>
+                    </div>
                 </div>
             </div>
         </div>
