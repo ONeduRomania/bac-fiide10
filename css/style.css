@@ -130,13 +130,12 @@ footer {
     text-align: center;
     padding: 10px 0;
     background-color: #fff;
-    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    /* Elimină proprietățile 'position', 'bottom', 'left', 'width' pentru a nu mai fi fixat */
     font-size: 0.8em;
+    margin-top: 20px; /* Adaugă spațiu între conținut și footer */
 }
+
 
 .footer-links a {
     color: gray;
@@ -268,5 +267,28 @@ footer {
     .hamburger {
         display: block;
     }
+}
+
+@media (min-width: 769px) {
+    .hamburger {
+        display: none;
+    }
+
+    .sidebar {
+        position: static; /* Meniul lateral va fi static pe ecrane mai mari */
+        width: 200px; /* Lățimea originală a meniului lateral */
+        box-shadow: none; /* Nu mai este nevoie de umbra pe ecrane mari */
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+}
+
+.header {
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000; /* Asigură că este deasupra altor elemente */
 }
 

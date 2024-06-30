@@ -20,6 +20,11 @@ $result = $conn->query($sql);
 </head>
 <body>
 
+<div class="header">
+    <!-- Aici poți adăuga conținut suplimentar dacă este cazul -->
+</div>
+
+
 <?php include 'includes/sidebar.php'; ?>
 
 <div class="main-content">
