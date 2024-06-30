@@ -2,7 +2,7 @@
 include 'includes/config.php';
 $conn = get_db_connection($config);
 
-$sql = "SELECT title, description, date, time FROM news";
+$sql = "SELECT title, description, date, time FROM news ORDER BY id DESC";
 $result = $conn->query($sql);
 ?>
 
