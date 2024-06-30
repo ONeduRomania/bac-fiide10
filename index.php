@@ -53,14 +53,20 @@ $result = $conn->query($sql);
             <div class="side-column">
                 <div class="calendar">
                     <h2>Calendar 2024</h2>
-                    <div class="calendar-event" data-date="today">29.06 14:00 - Rezultate examen</div>
-                    <!-- Adaugă alte evenimente similar -->
+                    <div class="calendar-event" data-date="today">01.07 09:00 - Limba și literatura română</div>
+                    <div class="calendar-event">02.07 09:00 - Proba obligatorie a profilului</div>
+                    <div class="calendar-event">04.07 09:00 - Proba la alegere a profilui sau specializării</div>
+                    <div class="calendar-event">04.07 09:00 - Proba la alegere a profilui sau specializării</div>
+                    <div class="calendar-event">05.07 09:00 - Limba și literatura maternă</div>
+                    <div class="calendar-event">08.07 12:00 - Afișarea rezultatelor</div>
+                    <div class="calendar-event">08.07 12-18 - Depunerea contestațiilor</div>
+                    <div class="calendar-event">12.07 - Rezultate finale</div>
                 </div>
                 <div class="statistics">
                     <h2>Statistici</h2>
                     <div class="statistic-item">
                         <p>Candidați înscriși</p>
-                        <span>0</span>
+                        <span>134.000</span>
                     </div>
                     <div class="statistic-item">
                         <p>Candidați prezenți</p>
