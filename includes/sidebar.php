@@ -27,3 +27,13 @@
         <li><a href="https://admitere.fiide10.ro"><i class="icon-college"></i> Vreau la facultate</a></li>
     </ul>
 </div>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F5DDDBNQ2J"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-F5DDDBNQ2J');
+</script>
