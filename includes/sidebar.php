@@ -13,7 +13,7 @@
     </div>
     <ul>
         <li><a href="https://bac.fiide10.ro/"><i class="icon-dash"></i> Dashboard</a></li>
-        <li><a href="http://bac.fiide10.ro/info"><i class="icon-info"></i> Informații utile</a></li>
+        <li><a href="http://bac.fiide10.ro/info.php"><i class="icon-info"></i> Informații utile</a></li>
         <li><a href="https://bac.fiide10.ro/results"><i class="icon-results"></i> Rezultate</a></li>
         <li><a href="https://bac.fiide10.ro/subiecte"><i class="icon-subjects"></i> Subiecte</a></li>
         <li><a href="https://examen.fiide10.ro"><i class="icon-training"></i> Antrenează-te</a></li>
