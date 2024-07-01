@@ -1,6 +1,99 @@
 <?php
+//include 'includes/config.php';
+//$conn = get_db_connection($config);
+//
+//$sql = "SELECT title, description, date, time FROM news ORDER BY id DESC";
+//$result = $conn->query($sql);
+//?>
+<!---->
+<!--<!DOCTYPE html>-->
+<!--<html lang="ro">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title>Bacalaureat de 10!</title>-->
+<!--    <link rel="icon" href="images/favicon.png" type="image/x-icon">-->
+<!--    <link rel="stylesheet" href="css/style.css">-->
+<!--    <script src="js/script.js" defer></script>-->
+<!---->
+<!--    --><?php //include 'includes/sidebar.php'; ?>
+<!---->
+<!--</head>-->
+<!--<body>-->
+<!---->
+<!--<div class="main-content">-->
+<!--    <div class="container">-->
+<!--        <div class="columns">-->
+<!--            <div class="news">-->
+<!--                <h2>Noutăți 2024</h2>-->
+<!--                --><?php
+//                if ($result->num_rows > 0) {
+//                    while($row = $result->fetch_assoc()) {
+//                        echo '<div class="news-item">';
+//                        echo '<div class="news-content">';
+//                        echo '<div class="news-title">' . $row["title"] . '</div>';
+//                        echo '<div class="news-description">' . $row["description"] . '</div>';
+//                        echo '</div>';
+//                        echo '<div class="news-footer">';
+//                        echo '<div class="news-date">' . $row["date"] . ' ' . $row["time"] . '</div>';
+//                        echo '<div class="logo-link">';
+//                        echo '<a href="https://onedu.ro" target="_blank"><img src="https://www.onedu.ro/wp-content/uploads/2023/08/logoCOR.webp" alt="logo_onedu"></a>';
+//                        echo '</div>';
+//                        echo '</div>';
+//                        echo '</div>';
+//
+//                    }
+//                } else {
+//                    echo '0 results';
+//                }
+//                ?>
+<!--            </div>-->
+<!--            <div class="side-column">-->
+<!--                <div class="calendar">-->
+<!--                    <h2>Calendar 2024</h2>-->
+<!--                    <div class="calendar-event" data-date="today">01.07 09:00 - Limba și literatura română</div>-->
+<!--                    <div class="calendar-event">02.07 09:00 - Proba obligatorie a profilului</div>-->
+<!--                    <div class="calendar-event">04.07 09:00 - Proba la alegere a profilui sau specializării</div>-->
+<!--                    <div class="calendar-event">05.07 09:00 - Limba și literatura maternă</div>-->
+<!--                    <div class="calendar-event">08.07 12:00 - Afișarea rezultatelor</div>-->
+<!--                    <div class="calendar-event">08.07 12-18 - Depunerea contestațiilor</div>-->
+<!--                    <div class="calendar-event">12.07 - Rezultate finale</div>-->
+<!--                </div>-->
+<!--                <div class="statistics">-->
+<!--                    <h2>Statistici</h2>-->
+<!--                    <div class="statistic-item">-->
+<!--                        <p>Candidați înscriși</p>-->
+<!--                        134.000-->
+<!--<!--                        <span>134.000</span>-->-->
+<!--                    </div>-->
+<!--                    <div class="statistic-item">-->
+<!--                        <p>Candidați prezenți</p>-->
+<!--                        0-->
+<!--                    </div>-->
+<!--                    <div class="statistic-item">-->
+<!--                        <p>Candidați promovați</p>-->
+<!--                        0-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+<!--</body>-->
+<!--<footer>-->
+<!--    --><?php
+//    $conn->close();
+//    include 'includes/footer.php';
+//    ?>
+<!--</footer>-->
+<!--</html>-->
+
+<?php
 include 'includes/config.php';
 $conn = get_db_connection($config);
+
+$date_today = date('j M.');
+$time_now = date('H.i');
 
 $sql = "SELECT title, description, date, time FROM news ORDER BY id DESC";
 $result = $conn->query($sql);
@@ -17,7 +110,6 @@ $result = $conn->query($sql);
     <script src="js/script.js" defer></script>
 
     <?php include 'includes/sidebar.php'; ?>
-
 </head>
 <body>
 
@@ -28,20 +120,29 @@ $result = $conn->query($sql);
                 <h2>Noutăți 2024</h2>
                 <?php
                 if ($result->num_rows > 0) {
-                    while($row = $result->fetch_assoc()) {
-                        echo '<div class="news-item">';
-                        echo '<div class="news-content">';
-                        echo '<div class="news-title">' . $row["title"] . '</div>';
-                        echo '<div class="news-description">' . $row["description"] . '</div>';
-                        echo '</div>';
-                        echo '<div class="news-footer">';
-                        echo '<div class="news-date">' . $row["date"] . ' ' . $row["time"] . '</div>';
-                        echo '<div class="logo-link">';
-                        echo '<a href="https://onedu.ro" target="_blank"><img src="https://www.onedu.ro/wp-content/uploads/2023/08/logoCOR.webp" alt="logo_onedu"></a>';
-                        echo '</div>';
-                        echo '</div>';
-                        echo '</div>';
+                    while ($row = $result->fetch_assoc()) {
+                        // Construim date-time-ul știrii
+                        $news_date_time_str = $row["date"] . ' ' . $row["time"];
+                        $news_date_time = DateTime::createFromFormat('j M. H.i', $news_date_time_str);
 
+                        // Obținem date-time-ul curent
+                        $current_date_time = new DateTime();
+
+                        // Comparația datei și orei știrii cu data și ora curentă
+                        if ($news_date_time <= $current_date_time) {
+                            echo '<div class="news-item">';
+                            echo '<div class="news-content">';
+                            echo '<div class="news-title">' . htmlspecialchars($row["title"]) . '</div>';
+                            echo '<div class="news-description">' . htmlspecialchars($row["description"]) . '</div>';
+                            echo '</div>';
+                            echo '<div class="news-footer">';
+                            echo '<div class="news-date">' . htmlspecialchars($row["date"]) . ' ' . htmlspecialchars($row["time"]) . '</div>';
+                            echo '<div class="logo-link">';
+                            echo '<a href="https://onedu.ro" target="_blank"><img src="https://www.onedu.ro/wp-content/uploads/2023/08/logoCOR.webp" alt="logo_onedu"></a>';
+                            echo '</div>';
+                            echo '</div>';
+                            echo '</div>';
+                        }
                     }
                 } else {
                     echo '0 results';
@@ -64,7 +165,6 @@ $result = $conn->query($sql);
                     <div class="statistic-item">
                         <p>Candidați înscriși</p>
                         134.000
-<!--                        <span>134.000</span>-->
                     </div>
                     <div class="statistic-item">
                         <p>Candidați prezenți</p>
@@ -87,3 +187,4 @@ $result = $conn->query($sql);
     ?>
 </footer>
 </html>
+
