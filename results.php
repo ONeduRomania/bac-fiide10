@@ -30,15 +30,17 @@
                 if (isset($_GET['unique_code'])) {
                     $unique_code = $_GET['unique_code'];
 
-                    function get_iframe_url($unique_code)
+                    function get_redirect_url($unique_code)
                     {
                         $county = (ctype_alpha($unique_code[1])) ? substr($unique_code, 0, 2) : $unique_code[0];
                         $url = "https://static.evaluare.edu.ro/2023/rezultate/{$county}/index.html?queries[search]={$unique_code}";
                         return $url;
                     }
 
-                    $iframe_url = get_iframe_url($unique_code);
-                    echo "<iframe src='{$iframe_url}' width='100%' height='600px'></iframe>";
+                    $redirect_url = get_redirect_url($unique_code);
+
+                    header("Location: {$redirect_url}");
+                    exit;
                 }
                 ?>
             </div>
