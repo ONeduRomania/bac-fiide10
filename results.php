@@ -33,7 +33,7 @@
                     function get_iframe_url($unique_code)
                     {
                         $county = (ctype_alpha($unique_code[1])) ? substr($unique_code, 0, 2) : $unique_code[0];
-                        $url = "http://static.evaluare.edu.ro/2023/rezultate/{$county}/index.html?queries[search]={$unique_code}";
+                        $url = "https://static.evaluare.edu.ro/2023/rezultate/{$county}/index.html?queries[search]={$unique_code}";
                         return $url;
                     }
 
