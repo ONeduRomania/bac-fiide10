@@ -2,6 +2,9 @@
 include 'includes/config.php';
 $conn = get_db_connection($config);
 
+$date_today = date('j M.');
+$time_now = date('H.i');
+
 $sql = "SELECT title, description, date, time FROM news ORDER BY id DESC";
 $result = $conn->query($sql);
 ?>
@@ -28,20 +31,26 @@ $result = $conn->query($sql);
                 <h2>Noutăți 2024</h2>
                 <?php
                 if ($result->num_rows > 0) {
-                    while($row = $result->fetch_assoc()) {
-                        echo '<div class="news-item">';
-                        echo '<div class="news-content">';
-                        echo '<div class="news-title">' . $row["title"] . '</div>';
-                        echo '<div class="news-description">' . $row["description"] . '</div>';
-                        echo '</div>';
-                        echo '<div class="news-footer">';
-                        echo '<div class="news-date">' . $row["date"] . ' ' . $row["time"] . '</div>';
-                        echo '<div class="logo-link">';
-                        echo '<a href="https://onedu.ro" target="_blank"><img src="https://www.onedu.ro/wp-content/uploads/2023/08/logoCOR.webp" alt="logo_onedu"></a>';
-                        echo '</div>';
-                        echo '</div>';
-                        echo '</div>';
+                    while ($row = $result->fetch_assoc()) {
+                        $news_date = DateTime::createFromFormat('j M.', $row["date"]);
+                        $news_time = DateTime::createFromFormat('H.i', $row["time"]);
+                        $current_date = new DateTime();
 
+                        if ($news_date < $current_date ||
+                            ($news_date->format('j M.') == $current_date->format('j M.') && $news_time <= $current_date)) {
+                            echo '<div class="news-item">';
+                            echo '<div class="news-content">';
+                            echo '<div class="news-title">' . $row["title"] . '</div>';
+                            echo '<div class="news-description">' . $row["description"] . '</div>';
+                            echo '</div>';
+                            echo '<div class="news-footer">';
+                            echo '<div class="news-date">' . $row["date"] . ' ' . $row["time"] . '</div>';
+                            echo '<div class="logo-link">';
+                            echo '<a href="https://onedu.ro" target="_blank"><img src="https://www.onedu.ro/wp-content/uploads/2023/08/logoCOR.webp" alt="logo_onedu"></a>';
+                            echo '</div>';
+                            echo '</div>';
+                            echo '</div>';
+                        }
                     }
                 } else {
                     echo '0 results';
