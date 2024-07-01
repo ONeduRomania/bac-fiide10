@@ -132,8 +132,8 @@ $result = $conn->query($sql);
                         if ($news_date_time <= $current_date_time) {
                             echo '<div class="news-item">';
                             echo '<div class="news-content">';
-                            echo '<div class="news-title">' . htmlspecialchars($row["title"]) . '</div>';
-                            echo '<div class="news-description">' . htmlspecialchars($row["description"]) . '</div>';
+                            echo '<div class="news-title">' . $row["title"] . '</div>';
+                            echo '<div class="news-description">' . $row["description"] . '</div>';
                             echo '</div>';
                             echo '<div class="news-footer">';
                             echo '<div class="news-date">' . htmlspecialchars($row["date"]) . ' ' . htmlspecialchars($row["time"]) . '</div>';
