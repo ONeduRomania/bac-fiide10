@@ -33,8 +33,11 @@ $result = $conn->query($sql);
                 if ($result->num_rows > 0) {
                     while ($row = $result->fetch_assoc()) {
                         $news_date = DateTime::createFromFormat('j M.', $row["date"]);
+                        echo $news_date->format('j M.') . ' ' . $date_today . '<br>';
                         $news_time = DateTime::createFromFormat('H.i', $row["time"]);
+                        echo $news_time->format('H.i') . ' ' . $time_now . '<br>';
                         $current_date = new DateTime();
+                        echo $current_date->format('j M.') . ' ' . $current_date->format('H.i') . '<br>';
 
                         if ($news_date < $current_date ||
                             ($news_date->format('j M.') == $current_date->format('j M.') && $news_time <= $current_date)) {
