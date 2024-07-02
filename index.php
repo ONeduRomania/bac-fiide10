@@ -152,8 +152,8 @@ $result = $conn->query($sql);
             <div class="side-column">
                 <div class="calendar">
                     <h2>Calendar 2024</h2>
-                    <div class="calendar-event" data-date="today">01.07 09:00 - Limba și literatura română</div>
-                    <div class="calendar-event">02.07 09:00 - Proba obligatorie a profilului</div>
+<!--                    <div class="calendar-event" data-date="today">01.07 09:00 - Limba și literatura română</div>-->
+                    <div class="calendar-event" data-date="today">02.07 09:00 - Proba obligatorie a profilului</div>
                     <div class="calendar-event">04.07 09:00 - Proba la alegere a profilui sau specializării</div>
                     <div class="calendar-event">05.07 09:00 - Limba și literatura maternă</div>
                     <div class="calendar-event">08.07 12:00 - Afișarea rezultatelor</div>
