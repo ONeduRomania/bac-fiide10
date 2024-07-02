@@ -164,11 +164,11 @@ $result = $conn->query($sql);
                     <h2>Statistici</h2>
                     <div class="statistic-item">
                         <p>Candidați înscriși</p>
-                        134.000
+                        125.694
                     </div>
                     <div class="statistic-item">
                         <p>Candidați prezenți</p>
-                        0
+                        123.583
                     </div>
                     <div class="statistic-item">
                         <p>Candidați promovați</p>
